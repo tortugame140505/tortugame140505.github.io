@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Página de concientización ambiental">
+    <meta name="author" content="">
+
+    <title>Desarrollo Sustentable</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        /* Custom Green Theme */
+        body {
+            background-color: #f4f8f5;
+            color: #2e6b3b;
+        }
+
+        .animal_section {
+            background-color: #d1f2d3;
+            padding: 50px 0;
+        }
+
+        .animal_section .heading_container h2 {
+            color: #3b7b3a;
+        }
+
+        .animal_section .img-box img {
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .author_section {
+            background-color: #b5e8b2;
+            padding: 50px 0;
+        }
+
+        .author_section .heading_container h2 {
+            color: #3b7b3a;
+        }
+
+        .author_section .box {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .author_section .box img {
+            border-radius: 50%;
+            border: 3px solid #3b7b3a;
+            margin-bottom: 15px;
+            width: 180px; /* Aumenta el tamaño de las imágenes */
+            height: 180px; /* Aumenta el tamaño de las imágenes */
+        }
+
+        .author_section .box h6 {
+            color: #3b7b3a;
+            font-size: 22px; /* Aumenta el tamaño del nombre */
+            font-weight: bold;
+        }
+
+        .author_section .box .profession {
+            color: #4b8e4e;
+        }
+
+        /* Author section a full-width layout */
+        .author_section .container {
+            width: 100%;
+            max-width: none;
+        }
+
+        .author_section .row {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .author_section .col-md-2 {
+            flex: 0 0 20%;
+            padding: 15px;
+        }
+
+        /* Menu Styles */
+        .navbar-nav .nav-link {
+            font-size: 16px;
+            font-weight: 600;
+            color: #3b7b3a !important;  /* Color de texto */
+            background-color: #e3f8e3;  /* Color de fondo igual al de la cinta */
+            border: none;  /* Quitar los bordes */
+            padding: 10px 15px;  /* Espaciado interno para hacerlo más grande */
+            border-radius: 5px;  /* Opcional: redondear las esquinas */
+            transition: background-color 0.3s ease;  /* Efecto suave para el hover */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #2e6b3b !important;  /* Color de texto cuando el mouse pasa por encima */
+            background-color: #c5e7c5;  /* Color de fondo cuando se pasa el mouse */
+            text-decoration: none;  /* Eliminar subrayado en el hover */
+        }
+
+        .navbar-toggler-icon {
+            background-color: #3b7b3a;
+        }
+
+        .navbar {
+            background-color: #e3f8e3;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Inicio del Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">Desarrollo Sustentable</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link btn btn-success" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success" href="calculadora.html">Calculadora de Carbono</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success" href="donar.html">Donar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success" href="evaluador.html">Evaluador de Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                       
+                    </li>
+                    <li class="nav-item">
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                    </li>
+                    
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Fin del Header -->
+
+    <!-- Animal Section -->
+    <section class="animal_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>Salva la Fauna</h2>
+                        </div>
+                        <p>Con el fin de concientizar a los alumnos sobre la importancia de cuidar a los animales en peligro de extinción.</p>
+                        <div class="btn-box">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-box">
+                        <img src="images/animal.png" alt="Animal en peligro de extinción" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Animal Section -->
+
+    <!-- Author Section -->
+    <section class="author_section">
+        <div class="container">
+            <div class="heading_container">
+                <h2>Conoce a los Autores</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="box">
+                        <img src="images/autor1.png" alt="Autor 1">
+                        <h6>Aarón Fabricio Dzib Jiménez</h6>
+                        <p class="profession">Programador web</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="box">
+                        <img src="images/autor2.jpeg" alt="Autor 2">
+                        <h6>Luis Ángel Sosa Alvarado</h6>
+                        <p class="profession">Programador web</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="box">
+                        <img src="images/autor3.jpeg" alt="Autor 3">
+                        <h6>Miguel Arcángel Peraza Tamay</h6>
+                        <p class="profession">Programador web</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="box">
+                        <img src="images/autor4.jpg" alt="Autor 4">
+                        <h6>Christian Rafael Salcedo Chan</h6>
+                        <p class="profession">Programador web</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="box">
+                        <img src="images/autor5.jpg" alt="Autor 5">
+                        <h6>Cristian Abraham Pech Alamilla</h6>
+                        <p class="profession">Programador web</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Author Section -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Desarrollo Sustentable © 2024</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
+

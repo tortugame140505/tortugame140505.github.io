@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Carbono</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f8f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #e7f5e6;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+    input {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #c8e6c9;
+      border-radius: 5px;
+      background-color: #f4f8f4;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #388e3c;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #c8e6c9;
+      border-radius: 5px;
+      border: 1px solid #a5d6a7;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Huella de Carbono</h1>
+    <form id="carbonForm">
+      <label for="electricity">Consumo eléctrico (kWh/mes):</label>
+      <input type="number" id="electricity" placeholder="Ej: 200">
+
+      <label for="fuel">Consumo de combustible (litros/mes):</label>
+      <input type="number" id="fuel" placeholder="Ej: 50">
+
+      <label for="transport">Kilómetros en transporte público (km/mes):</label>
+      <input type="number" id="transport" placeholder="Ej: 300">
+
+      <button type="button" onclick="calculateCarbon()">Calcular</button>
+      <button type="button" onclick="generatePDF()">Generar PDF</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculateCarbon() {
+      const electricity = parseFloat(document.getElementById('electricity').value) || 0;
+      const fuel = parseFloat(document.getElementById('fuel').value) || 0;
+      const transport = parseFloat(document.getElementById('transport').value) || 0;
+
+      const carbonFootprint = (electricity * 0.233) + (fuel * 2.31) + (transport * 0.05);
+
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = `<h2>Resultado</h2><p>Tu huella de carbono mensual es: <strong>${carbonFootprint.toFixed(2)} kg CO₂</strong></p>`;
+    }
+
+    function generatePDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      const electricity = document.getElementById('electricity').value || 'No especificado';
+      const fuel = document.getElementById('fuel').value || 'No especificado';
+      const transport = document.getElementById('transport').value || 'No especificado';
+      const resultText = document.getElementById('result').innerText || 'No se han calculado resultados';
+
+      doc.text("Calculadora de Huella de Carbono", 10, 10);
+      doc.text(`Consumo eléctrico: ${electricity} kWh/mes`, 10, 20);
+      doc.text(`Consumo de combustible: ${fuel} litros/mes`, 10, 30);
+      doc.text(`Transporte público: ${transport} km/mes`, 10, 40);
+      doc.text("Resultado:", 10, 50);
+      doc.text(resultText, 10, 60);
+
+      doc.save("huella_de_carbono.pdf");
+    }
+  </script>
+</body>
+</html>
